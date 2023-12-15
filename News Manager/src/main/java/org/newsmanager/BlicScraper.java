@@ -2,13 +2,15 @@ package org.newsmanager;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
+import org.newsmanager.data.Post;
 
 import java.io.IOException;
+import java.util.List;
 
 public class BlicScraper implements Scraper {
 
     @Override
-    public String scrape() {
+    public List<Post> scrape() {
         try {
             Document doc = Jsoup.connect("https://www.blic.rs/vesti").get();
             System.out.println(doc);
@@ -16,6 +18,6 @@ public class BlicScraper implements Scraper {
             throw new RuntimeException(e);
         }
 
-        return "";
+        return null;
     }
 }

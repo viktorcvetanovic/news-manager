@@ -1,7 +1,11 @@
 package org.newsmanager;
 
+import org.newsmanager.data.Post;
+
+import java.util.List;
+
 public interface Scraper {
 
-    String scrape();
+    List<Post> scrape();
 
 }
